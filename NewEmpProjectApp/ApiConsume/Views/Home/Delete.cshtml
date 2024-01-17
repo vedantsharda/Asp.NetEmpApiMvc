@@ -1,10 +1,7 @@
-
 @model ApiConsume.Models.EmpViewModel
 @{
     ViewData["Title"] = "Delete";
 }
-
-
 
 <h3>Deleting</h3>
 <dl class="row">
@@ -16,14 +13,11 @@
     </dd>
 </dl>
 
-
 <form asp-action="Delete" method="post">
     <input type="hidden" asp-for="EmpID" value="@Model.EmpID" />
     <button type="submit" class="btn btn-danger">delete</button>
     <a asp-action="Index">Back to List</a>
 </form>
-
-
 
     @section Scripts {
         @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

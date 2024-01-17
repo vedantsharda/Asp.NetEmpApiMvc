@@ -9,13 +9,6 @@ namespace ApiConsume.Controllers;
 
 public class HomeController : Controller
 {
-    //private readonly ILogger<HomeController> _logger;
-    //string baseUrl = "https://localhost:7285/";
-
-    //public HomeController(ILogger<HomeController> logger)
-    //{
-    //    _logger = logger;
-    //}
     Uri baseAddress = new Uri("https://localhost:7285/api");
     private readonly HttpClient _client;
     public HomeController()
@@ -57,7 +50,6 @@ public class HomeController : Controller
         }
         return View();
     }
-
 
     [HttpGet]
     public async Task<IActionResult> Delete(int EmpID)
@@ -108,13 +100,6 @@ public class HomeController : Controller
         }
         return View();
     }
-
-
-
-
-
-
-
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

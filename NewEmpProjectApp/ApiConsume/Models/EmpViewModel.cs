@@ -13,4 +13,3 @@ public class EmpViewModel
     public string District { get; set; }
     public string Pincode { get; set; }
 }
-

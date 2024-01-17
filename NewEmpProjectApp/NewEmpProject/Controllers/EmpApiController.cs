@@ -43,7 +43,6 @@ public class EmpApiController : ControllerBase
         return Ok();
     }
 
-
     [HttpPut]
     public async Task<IActionResult> Put(UserModel user)
     {

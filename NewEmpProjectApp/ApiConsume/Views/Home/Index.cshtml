@@ -1,59 +1,41 @@
-﻿
-@model IEnumerable<ApiConsume.Models.EmpViewModel>
+﻿@model IEnumerable<ApiConsume.Models.EmpViewModel>
 @{
     ViewData["Title"] = "Index";
 }
 
 <h1>Index</h1>
 
-@*<p>
-    <a asp-action="Create">Create New</a>
-</p>*@
-
-
 <table class="table">
     <thead>
-
         <tr>
             <th>
                 @Html.DisplayName("EmpID")
             </th>
-        
             <th>
                 @Html.DisplayName("EmpName")
             </th>
-        
             <th>
                 @Html.DisplayName("EmpSalary")
             </th>
-       
             <th>
                 @Html.DisplayName("EmpAddress1")
             </th>
-
             <th>
                 @Html.DisplayName("EmpAddress2")
             </th>
-
             <th>
                 @Html.DisplayName("EmpAddress3")
             </th>
-
             <th>
                 @Html.DisplayName("EmpState")
             </th>
-
             <th>
                 @Html.DisplayName("District")
             </th>
-
             <th>
                 @Html.DisplayName("Pincode")
             </th>
-
             </tr>
-
-
     </thead>
     <tbody>
 
@@ -76,9 +58,4 @@
             </tr>
         }
     </tbody>
-
 </table>
-
-
-
-
