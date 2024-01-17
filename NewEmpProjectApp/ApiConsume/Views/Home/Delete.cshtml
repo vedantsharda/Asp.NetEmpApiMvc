@@ -1,0 +1,30 @@
+
+@model ApiConsume.Models.EmpViewModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+
+<h3>Deleting</h3>
+<dl class="row">
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.EmpID)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.EmpID)
+    </dd>
+</dl>
+
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="EmpID" value="@Model.EmpID" />
+    <button type="submit" class="btn btn-danger">delete</button>
+    <a asp-action="Index">Back to List</a>
+</form>
+
+
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

@@ -1,0 +1,65 @@
+
+@model ApiConsume.Models.EmpViewModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="EmpID" />
+            <div class="form-group">
+                <label asp-for="EmpName" class="control-label"></label>
+                <input asp-for="EmpName" class="form-control" />
+                <span asp-validation-for="EmpName" class="text-danger"></span>
+
+                <label asp-for="EmpSalary" class="control-label"></label>
+                <input asp-for="EmpSalary" class="form-control" />
+                <span asp-validation-for="EmpSalary" class="text-danger"></span>
+
+                <label asp-for="EmpAddress1" class="control-label"></label>
+                <input asp-for="EmpAddress1" class="form-control" />
+                <span asp-validation-for="EmpAddress1" class="text-danger"></span>
+
+                <label asp-for="EmpAddress2" class="control-label"></label>
+                <input asp-for="EmpAddress2" class="form-control" />
+                <span asp-validation-for="EmpAddress2" class="text-danger"></span>
+
+                <label asp-for="EmpAddress3" class="control-label"></label>
+                <input asp-for="EmpAddress3" class="form-control" />
+                <span asp-validation-for="EmpAddress3" class="text-danger"></span>
+
+                <label asp-for="EmpState" class="control-label"></label>
+                <input asp-for="EmpState" class="form-control" />
+                <span asp-validation-for="EmpState" class="text-danger"></span>
+
+                <label asp-for="District" class="control-label"></label>
+                <input asp-for="District" class="form-control" />
+                <span asp-validation-for="District" class="text-danger"></span>
+
+                <label asp-for="Pincode" class="control-label"></label>
+                <input asp-for="Pincode" class="form-control" />
+                <span asp-validation-for="Pincode" class="text-danger"></span>
+            </div>
+            
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+

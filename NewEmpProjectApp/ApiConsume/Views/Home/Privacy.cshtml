@@ -1,0 +1,82 @@
+﻿@model ApiConsume.Models.EmpViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+
+<h3>Add Person</h3>
+
+<form asp-action="Privacy">
+    <div class="mb-3">
+        <label asp-for="EmpID" class="form-label">EmpID</label>
+        <input asp-for="EmpID" class="form-control">
+
+        <span class="text-danger" asp-validation-for="EmpID"></span>
+    </div>
+
+
+    <div class="mb-3">
+        <label asp-for="EmpName" class="form-label">EmpName</label>
+        <input asp-for="EmpName" class="form-control">
+
+        <span class="text-danger" asp-validation-for="EmpName"></span>
+    </div>
+
+
+
+
+    <div class=" mb-3">
+        <label asp-for="EmpSalary" class="form-label">EmpSalary</label>
+        <input asp-for="EmpSalary" type="text" class="form-control">
+
+        <span class="text-danger" asp-validation-for="EmpSalary"></span>
+
+
+    </div>
+    <div class="mb-3">
+        <label asp-for="EmpAddress1" class="form-label">Emp Address1</label>
+        <input asp-for="EmpAddress1" class="form-control">
+
+        <span class="text-danger" asp-validation-for="EmpAddress1"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="EmpAddress2" class="form-label">Emp Address2</label>
+        <input asp-for="EmpAddress2" class="form-control">
+
+        <span class="text-danger" asp-validation-for="EmpAddress2"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="EmpAddress3" class="form-label">Emp Address3</label>
+        <input asp-for="EmpAddress3" class="form-control">
+
+        <span class="text-danger" asp-validation-for="EmpAddress3"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="EmpState" class="form-label">EmpState</label>
+        <input asp-for="EmpState" class="form-control">
+
+        <span class="text-danger" asp-validation-for="EmpState"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="District" class="form-label">District</label>
+        <input asp-for="District" class="form-control">
+
+        <span class="text-danger" asp-validation-for="District"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Pincode" class="form-label">Pincode</label>
+        <input asp-for="Pincode" class="form-control">
+
+        <span class="text-danger" asp-validation-for="Pincode"></span>
+    </div>
+
+
+
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+</form>
+

@@ -1,0 +1,84 @@
+﻿
+@model IEnumerable<ApiConsume.Models.EmpViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+
+
+<table class="table">
+    <thead>
+
+        <tr>
+            <th>
+                @Html.DisplayName("EmpID")
+            </th>
+        
+            <th>
+                @Html.DisplayName("EmpName")
+            </th>
+        
+            <th>
+                @Html.DisplayName("EmpSalary")
+            </th>
+       
+            <th>
+                @Html.DisplayName("EmpAddress1")
+            </th>
+
+            <th>
+                @Html.DisplayName("EmpAddress2")
+            </th>
+
+            <th>
+                @Html.DisplayName("EmpAddress3")
+            </th>
+
+            <th>
+                @Html.DisplayName("EmpState")
+            </th>
+
+            <th>
+                @Html.DisplayName("District")
+            </th>
+
+            <th>
+                @Html.DisplayName("Pincode")
+            </th>
+
+            </tr>
+
+
+    </thead>
+    <tbody>
+
+        @foreach (var employeeweb in Model)
+        {
+            <tr>
+                <td>@employeeweb.EmpID </td>
+                <td>@employeeweb.EmpName</td>
+                <td>@employeeweb.EmpSalary</td>
+                <td>@employeeweb.EmpAddress1</td>
+                <td>@employeeweb.EmpAddress2</td>
+                <td>@employeeweb.EmpAddress3</td>
+                <td>@employeeweb.EmpState</td>
+                <td>@employeeweb.District</td>
+                <td>@employeeweb.Pincode</td>
+                <td>
+                    <a asp-action="Edit" asp-route-EmpID="@employeeweb.EmpID" class="btn btn-danger">Edit</a>
+                    <a asp-action="Delete" asp-route-EmpID="@employeeweb.EmpID" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+
+
+
